@@ -1,0 +1,434 @@
+<mxfile host="Electron" agent="ChatGPT" pages="2">
+  <diagram id="page1" name="1 - Domain Class Diagram">
+    <mxGraphModel dx="2341" dy="1423" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3020" pageHeight="2220" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=34;fontColor=#000000;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;b&gt;Yallah Nsafro — Class Diagram&lt;/b&gt;" vertex="1">
+          <mxGeometry height="63" width="2880" x="70" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="270" width="432" x="75" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_name" parent="traveler" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Traveler" vertex="1">
+          <mxGeometry height="54" width="432" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_attrs" parent="traveler" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- travelerId: String&lt;br&gt;- displayName: String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="432" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_ops" parent="traveler" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ createTripPlan(): TripPlan&lt;br&gt;+ saveTripPlan(plan: TripPlan): void&lt;br&gt;+ reopenTripPlan(id: String): TripPlan&lt;br&gt;+ deleteTripPlan(id: String): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="432" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="trip" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="438" width="510" x="620" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_name" parent="trip" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="TripPlan" vertex="1">
+          <mxGeometry height="54" width="510" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_attrs" parent="trip" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- planId: String&lt;br&gt;- destination: String&lt;br&gt;- departureCity: String&lt;br&gt;- startDate: Date&lt;br&gt;- endDate: Date&lt;br&gt;- numberOfTravelers: int = 1&lt;br&gt;- status: String = &amp;quot;Draft&amp;quot;&lt;br&gt;- lastModifiedAt: DateTime&lt;/div&gt;" vertex="1">
+          <mxGeometry height="248" width="510" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_ops" parent="trip" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ updateTripDetails(): void&lt;br&gt;+ editTravelPreferences(): void&lt;br&gt;+ requestItinerary(): Itinerary&lt;br&gt;+ save(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="510" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="prefs" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="354" width="475" x="1345" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="prefs_name" parent="prefs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="TravelPreferences" vertex="1">
+          <mxGeometry height="54" width="475" as="geometry" />
+        </mxCell>
+        <mxCell id="prefs_attrs" parent="prefs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- maximumBudget: Decimal&lt;br&gt;- currency: String&lt;br&gt;- interests: String[0..*]&lt;br&gt;- activities: String[0..*]&lt;br&gt;- preferredTimeSlots: String[0..*]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="164" width="475" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="prefs_ops" parent="prefs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ updateBudget(amount: Decimal): void&lt;br&gt;+ addInterest(interest: String): void&lt;br&gt;+ removeInterest(interest: String): void&lt;br&gt;+ updateTimeSlots(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="475" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="budget" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="298" width="420" x="2050" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="budget_name" parent="budget" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="BudgetEstimate" vertex="1">
+          <mxGeometry height="54" width="420" as="geometry" />
+        </mxCell>
+        <mxCell id="budget_attrs" parent="budget" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- estimateId: String&lt;br&gt;- totalAmount: Decimal&lt;br&gt;- currency: String&lt;br&gt;- calculatedAt: DateTime&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="420" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="budget_ops" parent="budget" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ calculateTotal(): Decimal&lt;br&gt;+ categoryTotal(name: String): Decimal&lt;br&gt;+ isWithinBudget(limit: Decimal): Boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="420" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="298" width="450" x="235" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_name" parent="itinerary" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Itinerary" vertex="1">
+          <mxGeometry height="54" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_attrs" parent="itinerary" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- itineraryId: String&lt;br&gt;- generatedAt: DateTime&lt;br&gt;- lastEditedAt: DateTime&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="450" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_ops" parent="itinerary" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ view(): void&lt;br&gt;+ addDay(day: ItineraryDay): void&lt;br&gt;+ getDay(number: int): ItineraryDay&lt;br&gt;+ refreshAfterPreferencesEdit(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="450" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="day" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="298" width="465" x="875" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="day_name" parent="day" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="ItineraryDay" vertex="1">
+          <mxGeometry height="54" width="465" as="geometry" />
+        </mxCell>
+        <mxCell id="day_attrs" parent="day" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- dayNumber: int&lt;br&gt;- date: Date&lt;br&gt;- notes: String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="465" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="day_ops" parent="day" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ addItem(item: ItineraryItem): void&lt;br&gt;+ editItem(itemId: String): void&lt;br&gt;+ removeItem(itemId: String): void&lt;br&gt;+ reorderItems(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="465" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="item" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="354" width="470" x="1530" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="item_name" parent="item" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="ItineraryItem" vertex="1">
+          <mxGeometry height="54" width="470" as="geometry" />
+        </mxCell>
+        <mxCell id="item_attrs" parent="item" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- itemId: String&lt;br&gt;- title: String&lt;br&gt;- startTime: Time[0..1]&lt;br&gt;- endTime: Time[0..1]&lt;br&gt;- position: int&lt;br&gt;- notes: String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="192" width="470" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="item_ops" parent="item" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ editDetails(): void&lt;br&gt;+ setOption(option: TravelOption): void&lt;br&gt;+ moveTo(position: int): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="470" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="price" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="382" width="525" x="2280" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="price_name" parent="price" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="PriceInfo" vertex="1">
+          <mxGeometry height="54" width="525" as="geometry" />
+        </mxCell>
+        <mxCell id="price_attrs" parent="price" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- amount: Decimal&lt;br&gt;- currency: String&lt;br&gt;- provenance: String&lt;br&gt;- retrievedAt: DateTime[0..1]&lt;br&gt;- provider: String[0..1]&lt;br&gt;- minimum: Decimal[0..1]&lt;br&gt;- maximum: Decimal[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="525" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="price_ops" parent="price" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ isLive(): Boolean&lt;br&gt;+ hasValidLabel(): Boolean&lt;br&gt;+ isStale(): Boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="525" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="option" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="242" width="490" x="1535" y="1355" as="geometry" />
+        </mxCell>
+        <mxCell id="option_name" parent="option" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=2;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="TravelOption" vertex="1">
+          <mxGeometry height="54" width="490" as="geometry" />
+        </mxCell>
+        <mxCell id="option_attrs" parent="option" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- optionId: String&lt;br&gt;- name: String&lt;br&gt;- location: String&lt;br&gt;- providerLink: String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="490" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="option_ops" parent="option" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ getProviderLink(): String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="490" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="flight" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="298" width="495" x="480" y="1770" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_name" parent="flight" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="FlightOption" vertex="1">
+          <mxGeometry height="54" width="495" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_attrs" parent="flight" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- airline: String&lt;br&gt;- flightNumber: String&lt;br&gt;- origin: String&lt;br&gt;- destination: String&lt;br&gt;- departureAt: DateTime&lt;br&gt;- arrivalAt: DateTime&lt;/div&gt;" vertex="1">
+          <mxGeometry height="192" width="495" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_ops" parent="flight" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ durationMinutes(): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="495" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="242" width="470" x="1220" y="1780" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_name" parent="hotel" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="HotelOption" vertex="1">
+          <mxGeometry height="54" width="470" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_attrs" parent="hotel" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- address: String&lt;br&gt;- checkIn: Date&lt;br&gt;- checkOut: Date&lt;br&gt;- starRating: float[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="470" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_ops" parent="hotel" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ numberOfNights(): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="470" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="restaurant" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="214" width="475" x="1880" y="1800" as="geometry" />
+        </mxCell>
+        <mxCell id="restaurant_name" parent="restaurant" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="RestaurantOption" vertex="1">
+          <mxGeometry height="54" width="475" as="geometry" />
+        </mxCell>
+        <mxCell id="restaurant_attrs" parent="restaurant" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- cuisine: String&lt;br&gt;- address: String&lt;br&gt;- openingHours: String[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="475" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="restaurant_ops" parent="restaurant" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ isOpenAt(time: DateTime): Boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="475" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="activity" parent="1" style="group;connectable=0;container=1;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" value="" vertex="1">
+          <mxGeometry height="214" width="485" x="2510" y="1790" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_name" parent="activity" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="ActivityOption" vertex="1">
+          <mxGeometry height="54" width="485" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_attrs" parent="activity" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;- activityType: String&lt;br&gt;- address: String&lt;br&gt;- durationMinutes: int[0..1]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="485" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="activity_ops" parent="activity" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ isAvailableAt(time: DateTime): Boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="485" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="inheritanceBus" parent="1" style="ellipse;strokeColor=none;fillColor=none;opacity=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="1779.5" y="1689.5" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_trip" edge="1" parent="1" source="traveler" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="trip" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_trip_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="510" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="traveler_trip_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="68" x="570" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_prefs" edge="1" parent="1" source="trip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;startArrow=diamond;startFill=1;startSize=16;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="prefs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_prefs_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="1160" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_prefs_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="1312" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_budget" edge="1" parent="1" source="trip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;startArrow=diamond;startFill=1;startSize=16;exitX=1;exitY=0.13;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="budget" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1210" y="205" />
+              <mxPoint x="1210" y="150" />
+              <mxPoint x="2260" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trip_budget_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="1153" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_budget_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..1" vertex="1">
+          <mxGeometry height="26" width="68" x="2266" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_itinerary" edge="1" parent="1" source="trip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;startArrow=diamond;startFill=1;startSize=16;exitX=0.35;exitY=1;exitDx=0;exitDy=0;entryX=0.522;entryY=0;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="itinerary" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="690" />
+              <mxPoint x="470" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trip_itinerary_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="806" y="566" as="geometry" />
+        </mxCell>
+        <mxCell id="trip_itinerary_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..1" vertex="1">
+          <mxGeometry height="26" width="68" x="471" y="747" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_days" edge="1" parent="1" source="itinerary" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;startArrow=diamond;startFill=1;startSize=16;exitX=1;exitY=0.45;exitDx=0;exitDy=0;entryX=0;entryY=0.45;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="day" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_days_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="712" y="883" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerary_days_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1..*" vertex="1">
+          <mxGeometry height="26" width="68" x="830" y="883" as="geometry" />
+        </mxCell>
+        <mxCell id="days_items" edge="1" parent="1" source="day" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;startArrow=diamond;startFill=1;startSize=16;exitX=1;exitY=0.45;exitDx=0;exitDy=0;entryX=0;entryY=0.36;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="item" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="days_items_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="1368" y="883" as="geometry" />
+        </mxCell>
+        <mxCell id="days_items_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="68" x="1486" y="883" as="geometry" />
+        </mxCell>
+        <mxCell id="item_price" edge="1" parent="1" source="item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="price" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="item_price_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="2008" y="887" as="geometry" />
+        </mxCell>
+        <mxCell id="item_price_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..1" vertex="1">
+          <mxGeometry height="26" width="68" x="2225" y="887" as="geometry" />
+        </mxCell>
+        <mxCell id="item_option" edge="1" parent="1" source="item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.47;entryY=0;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="option" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="item_option_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="68" x="1771" y="1141" as="geometry" />
+        </mxCell>
+        <mxCell id="item_option_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..1" vertex="1">
+          <mxGeometry height="26" width="68" x="1771" y="1303" as="geometry" />
+        </mxCell>
+        <mxCell id="option_price" edge="1" parent="1" source="option" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.52;exitDx=0;exitDy=0;entryX=0.84;entryY=1;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="price" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2720" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="option_price_mult0" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="1" vertex="1">
+          <mxGeometry height="26" width="35" x="2041" y="1439" as="geometry" />
+        </mxCell>
+        <mxCell id="option_price_mult1" parent="1" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontColor=#000000;fontSize=17;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0..1" vertex="1">
+          <mxGeometry height="26" width="68" x="2666" y="1173" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_parent" edge="1" parent="1" source="flight" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="inheritanceBus" value="">
+          <mxGeometry relative="1" x="-0.6495" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="1770" />
+              <mxPoint x="720" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hotel_parent" edge="1" parent="1" source="hotel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="inheritanceBus" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1455" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="restaurant_parent" edge="1" parent="1" source="restaurant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="inheritanceBus" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2117.5" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="activity_parent" edge="1" parent="1" source="activity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="inheritanceBus" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2752.5" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inheritance_arrow" edge="1" parent="1" source="inheritanceBus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;endArrow=block;endFill=0;endSize=19;entryX=0.5;entryY=1;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="option" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="2 - Services and Integrations">
+    <mxGraphModel dx="1810" dy="1290" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2910" pageHeight="1420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Yallah Nsafro — Supporting Classes&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=34;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="70" y="20" width="2770" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Implementation view  |  Shows how the previous use cases interact with APIs, the planner and storage" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=19;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="70" y="77" width="2770" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="separator" value="" style="shape=line;strokeColor=#000000;strokeWidth=1.5;" parent="1" vertex="1">
+          <mxGeometry x="70" y="135" width="2770" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="85" y="245" width="515" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_name" value="TravelerInterface" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="ui" vertex="1">
+          <mxGeometry x="0" y="0" width="515" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- currentPlanId: String[0..1]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="ui" vertex="1">
+          <mxGeometry x="0" y="54" width="515" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ enterTravelPreferences(): TripPlan&lt;br&gt;+ getItinerary(planId: String): Itinerary&lt;br&gt;+ viewItinerary(planId: String): Itinerary&lt;br&gt;+ editItinerary(planId: String): void&lt;br&gt;+ editTripPlan(planId: String): void&lt;br&gt;+ saveTripPlan(planId: String): void&lt;br&gt;+ openProviderLink(url: String): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="ui" vertex="1">
+          <mxGeometry x="0" y="106" width="515" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="search" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="790" y="170" width="550" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="search_name" value="SearchEngine" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="search" vertex="1">
+          <mxGeometry x="0" y="0" width="550" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="search_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- fallbackEnabled: Boolean = true&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="search" vertex="1">
+          <mxGeometry x="0" y="54" width="550" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="search_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ getUserPreferences(plan: TripPlan): TravelPreferences&lt;br&gt;+ retrieveHotels(): HotelOption[0..*]&lt;br&gt;+ retrieveFlights(): FlightOption[0..*]&lt;br&gt;+ retrieveLocations(): TravelOption[0..*]&lt;br&gt;+ retrievePrices(): PriceInfo[0..*]&lt;br&gt;+ retrieveInfo(): TravelOption[0..*]&lt;br&gt;+ useFallbackData(): TravelOption[0..*]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="search" vertex="1">
+          <mxGeometry x="0" y="106" width="550" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="planner" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="1510" y="175" width="555" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="planner_name" value="ItineraryPlanner" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="planner" vertex="1">
+          <mxGeometry x="0" y="0" width="555" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="planner_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- aiEnabled: Boolean = true&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="planner" vertex="1">
+          <mxGeometry x="0" y="54" width="555" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="planner_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ selectOptions(): TravelOption[0..*]&lt;br&gt;+ generateItinerary(plan: TripPlan): Itinerary&lt;br&gt;+ regenerateAfterPreferencesEdit(): Itinerary&lt;br&gt;+ generateFallbackItinerary(): Itinerary&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="planner" vertex="1">
+          <mxGeometry x="0" y="106" width="555" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="calculator" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="2280" y="215" width="540" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="calculator_name" value="BudgetCalculator" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="calculator" vertex="1">
+          <mxGeometry x="0" y="0" width="540" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="calculator_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- currency: String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="calculator" vertex="1">
+          <mxGeometry x="0" y="54" width="540" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="calculator_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ calculateBudget(plan: TripPlan): BudgetEstimate&lt;br&gt;+ calculateCategoryTotals(): void&lt;br&gt;+ validateTotal(): Boolean&lt;br&gt;+ validatePriceLabels(): Boolean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="calculator" vertex="1">
+          <mxGeometry x="0" y="106" width="540" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="repository" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="965" width="515" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="repository_name" value="TripPlanRepository" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="repository" vertex="1">
+          <mxGeometry x="0" y="0" width="515" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="repository_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="repository" vertex="1">
+          <mxGeometry x="0" y="54" width="515" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="repository_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ save(plan: TripPlan): void&lt;br&gt;+ load(planId: String): TripPlan[0..1]&lt;br&gt;+ delete(planId: String): Boolean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="repository" vertex="1">
+          <mxGeometry x="0" y="88" width="515" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="travel_api" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="785" y="955" width="565" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="travel_api_name" value="TravelAPIProvider" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="travel_api" vertex="1">
+          <mxGeometry x="0" y="0" width="565" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="travel_api_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- providerName: String&lt;br&gt;- endpoint: String&lt;br&gt;- isAvailable: Boolean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="travel_api" vertex="1">
+          <mxGeometry x="0" y="54" width="565" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="travel_api_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ searchFlights(): FlightOption[0..*]&lt;br&gt;+ searchHotels(): HotelOption[0..*]&lt;br&gt;+ searchRestaurants(): RestaurantOption[0..*]&lt;br&gt;+ searchActivities(): ActivityOption[0..*]&lt;br&gt;+ fetchPrices(): PriceInfo[0..*]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="travel_api" vertex="1">
+          <mxGeometry x="0" y="162" width="565" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" value="" style="group;connectable=1;container=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="1520" y="970" width="530" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_name" value="ExternalAIService" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" parent="ai" vertex="1">
+          <mxGeometry x="0" y="0" width="530" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_attrs" value="&lt;div style=&quot;text-align:left;&quot;&gt;- modelName: String&lt;br&gt;- endpoint: String&lt;br&gt;- isAvailable: Boolean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="ai" vertex="1">
+          <mxGeometry x="0" y="54" width="530" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_ops" value="&lt;div style=&quot;text-align:left;&quot;&gt;+ proposeSchedule(): Itinerary&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.6;fillColor=#FFFFFF;fontColor=#000000;spacing=12;align=left;verticalAlign=top;fontSize=17;" parent="ai" vertex="1">
+          <mxGeometry x="0" y="162" width="530" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_search" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.43;entryDx=0;entryDy=0;" parent="1" edge="1" source="ui" target="search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_planner" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.54;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.16;entryDx=0;entryDy=0;" parent="1" edge="1" source="ui" target="planner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="149" />
+              <mxPoint x="1455" y="149" />
+              <mxPoint x="1455" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_repo" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.544;exitY=1;exitDx=0;exitDy=0;entryX=0.475;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" source="ui" target="repository">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="search_api" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.496;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" source="search" target="travel_api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="search_planner" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.64;exitDx=0;exitDy=0;entryX=0;entryY=0.85;entryDx=0;entryDy=0;" parent="1" edge="1" source="search" target="planner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="planner_ai" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.51;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" source="planner" target="ai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="planner_budget" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.9;endArrow=none;startArrow=none;exitX=1;exitY=0.62;exitDx=0;exitDy=0;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" parent="1" edge="1" source="planner" target="calculator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note0" value="Note: TripPlan, Itinerary, TravelPreferences, TravelOption, PriceInfo and BudgetEstimate are defined in the Domain Class Diagram." style="rounded=0;dashed=1;dashPattern=4 4;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;verticalAlign=middle;spacing=12;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="2255" y="970" width="565" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" value="External AI is optional; if unavailable, the planner uses rule-based fallback.  All provider prices must be labeled." style="rounded=0;dashed=1;dashPattern=4 4;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;align=left;verticalAlign=middle;spacing=12;fontColor=#000000;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="2255" y="1120" width="565" height="98" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
